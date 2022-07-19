@@ -1,0 +1,65 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin-top: 3%;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.inner {
+  padding-left: 20%;
+}
+.accordion {
+  background-color: #cfd8dc;
+  color: rgb(32, 27, 27);
+  cursor: pointer;
+  padding: 26px;
+  width: 70%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 28px;
+  transition: 0.5s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #607d8b;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: rgb(23, 23, 23);
+  font-size: 28px;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  width: 70%;
+  flex-wrap: wrap;
+  padding: 10px 18px;
+  color: #212121;
+  background-color: rgb(176, 160, 160);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
